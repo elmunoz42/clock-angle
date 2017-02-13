@@ -12,7 +12,7 @@
                 $hour_value = $input_time_array[0] * 5;
             }
 
-            $difference_in_degrees = ($hour_value - $input_time_array[1]) * 6;
+            $difference_in_degrees = abs(($hour_value - $input_time_array[1]) * 6);
             return $difference_in_degrees . " degrees";
         }
     }
