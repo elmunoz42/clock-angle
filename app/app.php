@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/TitleCaseGenerator.php";
+    require_once __DIR__."/../src/Clock.php";
 
     $app = new Silex\Application();
 
@@ -14,9 +14,9 @@
     });
 
     $app->get("/view_title_case", function() use($app) {
-        $my_TitleCaseGenerator = new TitleCaseGenerator;
-        $title_cased_phrase = $my_TitleCaseGenerator->makeTitleCase($_GET['phrase']);
-        return $app['twig']->render('angle_result.html.twig', array('result' => $title_cased_phrase));
+        $input_time = new Clock;
+        $difference_in_degrees = $input_time->makeClockAngle($_GET['time']);
+        return $app['twig']->render('angle_result.html.twig', array('result' => $difference_in_degrees));
     });
 
     return $app;
