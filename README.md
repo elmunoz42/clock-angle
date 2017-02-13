@@ -22,9 +22,7 @@ A webpage that calculates the angle between hour and minute in clock.
 | Enter 1pm | "1:00" | 30 degrees |
 | Enter noon | "12:00" | 0 degrees|
 | Enter 12:30pm | "12:30" | 180 degrees |
-| Enter 1:15pm | "1:15" | 60 degrees |
-| Enter 1:25pm | "1:25" | 120 degrees |
-| Enter 2:50pm | "2:50" | 120 degrees |
+| Enter 12:45pm | "12:45" | 90 degrees |
 
 
 ## Known Bugs

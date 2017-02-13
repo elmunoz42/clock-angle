@@ -46,6 +46,19 @@
             $this->assertEquals("180 degrees", $result);
 
         }
+        function test_find1245ClockAngle()
+        {
+            //Arrange
+            $test_Clock = new Clock;
+            $input_time = "12:45";
+
+            //Act
+            $result = $test_Clock->makeClockAngle($input_time);
+
+            //Assert
+            $this->assertEquals("90 degrees", $result);
+
+        }
 
     }
 

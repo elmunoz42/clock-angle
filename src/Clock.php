@@ -13,6 +13,9 @@
             }
 
             $difference_in_degrees = abs(($hour_value - $input_time_array[1]) * 6);
+            if ($difference_in_degrees > 180) {
+                $difference_in_degrees = 360 - $difference_in_degrees;
+            }
             return $difference_in_degrees . " degrees";
         }
     }
